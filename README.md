@@ -294,11 +294,14 @@ Use `pytest.raises()` to test for expected exceptions.
 Example:
 ```python
 import pytest
-import vending_machine
 
-def test_insert_coin_when_quarter_is_string_raises():
+def insert_coins(quarters):
+    if type(quarters) is not int:
+        raise TypeError('quarters must be an integer')
+
+def test_insert_coin_when_quarters_is_string_raises():
     with pytest.raises(TypeError):
-        machine.insert_coins('foobar')
+        insert_coins('foobar')
 ```
 
 If the expected exception is raised, the test passes.
@@ -356,15 +359,14 @@ Fixtures can return data using return or yield.
 import pytest
 
 @pytest.fixture()
-def cards_db():
-    with TemporaryDirectory() as db_dir:
-        db_path = Path(db_dir)
-        db = cards.CardsDB(db_path)
-        yield db
-        db.close()
+def database():
+    db = MyDatabase()  # setup
+    yield db
+    db.close()  # teardown
 
-def test_empty(cards_db):
-    assert cards_db.count() == 0
+def test_database(database):
+    result = database.retrieve_answer()
+    assert result == 42
 ```
 
 Code before the yield is the setup code. Code after the yield is the teardown code.
