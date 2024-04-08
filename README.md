@@ -5,6 +5,8 @@ Resources:
 * https://cheatography.com/nanditha/cheat-sheets/pytest/
 * https://gist.github.com/kwmiebach/3fd49612ef7a52b5ce3a#file-pytest-md
 
+### Table of Contents
+
 * [Getting Started](README.md#getting-started)
   - [Using virtual environment venv](README.md#using-virtual-environment-venv)
   - [Using pip to install pytest](README.md#using-pip-to-install-pytest)
