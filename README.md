@@ -275,14 +275,14 @@ FAILED test_two.py::test_failing - assert (1, 2, 3) == (3, 2, 1)
 ```
 
 The options are:
-| Option      | Description |
-|:------------|:------------|
-| --tb=auto   | (default) 'long' tracebacks for the first and last entry, but 'short' style for the other entries |
-| --tb=no     | no traceback at all |
-| --tb=long   | exhaustive, informative traceback formatting |
-| --tb=short  | shorter traceback format |
-| --tb=line   | only one line per failure |
-| --tb=native | Python standard library formatting |
+| Option        | Description |
+|:--------------|:------------|
+| `--tb=auto`   | (default) 'long' tracebacks for the first and last entry, but 'short' style for the other entries |
+| `--tb=no`     | no traceback at all |
+| `--tb=long`   | exhaustive, informative traceback formatting |
+| `--tb=short`  | shorter traceback format |
+| `--tb=line`   | only one line per failure |
+| `--tb=native` | Python standard library formatting |
 
 For complete details on managing `pytest` output, see:
 https://docs.pytest.org/en/latest/how-to/output.html
