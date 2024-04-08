@@ -1,27 +1,27 @@
 # Quick, learn pytest
 
 Resources:
-https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/
-https://cheatography.com/nanditha/cheat-sheets/pytest/
-https://gist.github.com/kwmiebach/3fd49612ef7a52b5ce3a#file-pytest-md
+* https://pragprog.com/titles/bopytest2/python-testing-with-pytest-second-edition/
+* https://cheatography.com/nanditha/cheat-sheets/pytest/
+* https://gist.github.com/kwmiebach/3fd49612ef7a52b5ce3a#file-pytest-md
 
-* Getting Started
-  - Using virtual environment venv
-  - Using pip to install pytest
-* Running the pytest testing framework
-* Why pytest?
-* Features
-  - Test Discovery
-  - Using assert Statements
-  - Failing Test Code
-  - Test Outcomes
-  - Capturing stdout/stderr Output
-  - Traceback print mode
-  - Expected Exceptions
-  - Grouping Tests with Classes
-  - Running a Subset of Tests
-* Fixtures
-* Test Parameterization
+* [Getting Started](README.md#getting-started)
+  - [Using virtual environment venv](README.md#using-virtual-environment-venv)
+  - [Using pip to install pytest](README.md#using-pip-to-install-pytest)
+* [Running the pytest testing framework](README.md#running-the-pytest-testing-framework)
+* [Why pytest?](README.md#why-pytest)
+* [Features](README.md#features)
+  - [Test Discovery](README.md#test-discovery)
+  - [Using assert Statements](README.md#usingassertstatements)
+  - [Failing Test Code](README.md#failing-test-code)
+  - [Test Outcomes](README.md#test-outcomes)
+  - [Capturing stdout/stderr Output](README.md#capturing-stdoutstderr-output)
+  - [Traceback print mode](README.md#traceback-print-mode)
+  - [Expected Exceptions](README.md#expected-exceptions)
+  - [Grouping Tests with Classes](README.md#grouping-tests-with-classes)
+  - [Running a Subset of Tests](README.md#running-a-subset-of-tests)
+* [Fixtures](README.md#fixtures)
+* [Test Parameterization](README.md#test-parameterization)
 
 ## Getting Started
 
@@ -192,27 +192,23 @@ The default naming conventions:
 
 There are ways to alter these discovery rules via `pytest` configuration.
 
-### UsingassertStatements
+### Using assert Statements
 
-pytestallowsyoutousethestandardPythonassertforverifyingexpectationsandvaluesin
+`pytest` allows you to use the standard Python `assert` for verifying expectations and values in Python tests (`pytest` uses assert rewriting). These assert statements communicate test failure.
 
-Pythontests(pytestusesassertrewriting).Theseassertstatementscommunicatetestfailure.
+Other testing frameworks use assert helper functions.
 
-Othertestingframeworksuseasserthelperfunctions.
-
-
-##### Assertions in pytest versus unittest
-
-| pytest | unittest |
-|:-------|:---------|
-| `assert something` | `assertTrue(something)` |
-| `assert not something` | `assertFalse(something)` |
-| `assert a == b` | `assertEqual(a, b)` |
-| `assert a != b` | `assertNotEqual(a, b)` |
-| `assert a is None` | `assertIsNone(a)` |
-| `assert a is not None` | `assertIsNotNone(a)` |
-| `assert a <= b` | `assertLessEqual(a, b)` |
-| `assert 1 in [2, 3, 4]` | `assertNotIn(1, [2, 3, 4])` |
+Assertions in pytest versus unittest:
+| pytest                   | unittest |
+|:-------------------------|:---------|
+| `assert something`       | `assertTrue(something)` |
+| `assert not something`   | `assertFalse(something)` |
+| `assert a == b`          | `assertEqual(a, b)` |
+| `assert a != b`          | `assertNotEqual(a, b)` |
+| `assert a is None`       | `assertIsNone(a)` |
+| `assert a is not None`   | `assertIsNotNone(a)` |
+| `assert a <= b`          | `assertLessEqual(a, b)` |
+| `assert 1 in [2, 3, 4]`  | `assertNotIn(1, [2, 3, 4])` |
 | `assert 'fizz' not in 'fizzbuzz'` | `assertNotIn('fizz', 'fizzbuzz')` |
 
 ### Failing Test Code
